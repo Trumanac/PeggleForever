@@ -1,7 +1,7 @@
 # Builds Peggle Forever with the BigWigs packager and uploads it.
 #
 # Pushing a tag (e.g. v1.0.1) uploads to CurseForge (## X-Curse-Project-ID + secret CF_API_KEY), WoWInterface
-# (## X-WoWI-ID + secret WOWI_API_TOKEN) and GitHub Releases. Tags containing "alpha" or "beta"
+# (repository variable WOWI_ID + secret WOWI_API_TOKEN) and GitHub Releases. Tags containing "alpha" or "beta"
 # (e.g. v1.0.1-beta1) are uploaded as alpha / beta files.
 #
 # Actions tab -> "Package and release" -> "Run workflow" picks the targets by hand:
@@ -53,6 +53,7 @@ jobs:
           EVENT: ${{ github.event_name }}
           TARGETS: ${{ inputs.targets }}
           TAG: ${{ inputs.tag }}
+          WOWI_ID: ${{ vars.WOWI_ID }}
         run: |
           args=""
           if [ "$EVENT" = "workflow_dispatch" ]; then
@@ -66,6 +67,11 @@ jobs:
               echo "::error::Uploading needs a tag (e.g. v1.0.0). Leave targets on 'none' for a test build."
               exit 1
             fi
+          fi
+          # The WoWInterface addon id comes from the repository variable WOWI_ID, so tags made before
+          # ## X-WoWI-ID was in the TOC (like v1.0.0) can still be uploaded there.
+          if [ -n "$WOWI_ID" ] && [ "$args" != "-w 0" ]; then
+            args="$args -w $WOWI_ID"
           fi
           echo "args=$args" >> "$GITHUB_OUTPUT"
           echo "Packager arguments: ${args:-(none: upload everywhere)}"
