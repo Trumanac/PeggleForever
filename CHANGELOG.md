@@ -1,6 +1,6 @@
 # Peggle Forever (fan edition of Peggle by PopCap)
 
-## 1.0.0-dev
+## 1.0.0 (2026-10-20)
 Fan edition of the unofficial Peggle update (Ketho, 2.4.2). See NOTICE.md for credits.
 
 - Added heroes (8 Classic races), per-hero talent trees, new abilities and levels 14-23.

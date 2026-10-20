@@ -1,6 +1,6 @@
 ## Interface: 16001
 ## Title: Peggle Forever
-## Version: 1.0.0-dev
+## Version: 1.0.0
 ## Notes: Unofficial fan edition of PopCap's Peggle add-on, with heroes, talent trees and extra levels. Not affiliated with PopCap, EA or Blizzard.
 ## Author: SuperBirdy (fan edition); original add-on by PopCap Games, Inc.
 ## X-Curse-Project-ID: 1756022
