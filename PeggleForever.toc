@@ -1,0 +1,41 @@
+## Interface: 16001
+## Title: Peggle Forever
+## Version: 1.0.0-dev
+## Notes: Unofficial fan edition of PopCap's Peggle add-on, with heroes, talent trees and extra levels. Not affiliated with PopCap, EA or Blizzard.
+## Author: SuperBirdy (fan edition); original add-on by PopCap Games, Inc.
+## X-Curse-Project-ID: 1756022
+## X-Website: https://github.com/Trumanac/PeggleForever
+## SavedVariables: PeggleForeverData
+## SavedVariablesPerCharacter: PeggleForeverProfile
+#@do-not-package@
+## SavedVariables: PeggleData
+## SavedVariablesPerCharacter: PeggleProfile
+#@end-do-not-package@
+## IconTexture: Interface\AddOns\PeggleForever\images\minimap
+
+## Category: Minigames
+## Category-deDE: Minispiele
+## Category-esES: Minijuegos
+## Category-esMX: Minijuegos
+## Category-frFR: Mini-jeux
+## Category-itIT: Minigiochi
+## Category-koKR: 미니게임
+## Category-ptBR: Minijogos
+## Category-ruRU: Мини-игры
+## Category-zhCN: 迷你游戏
+## Category-zhTW: 迷你遊戲
+
+#@no-lib-strip@
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\lib.xml
+#@end-no-lib-strip@
+
+Levels.lua
+LevelsDesktop.lua
+Heroes.lua
+SoundList.lua
+Stats.lua
+Peggle.lua
+Icon.lua

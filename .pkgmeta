@@ -1,0 +1,16 @@
+# BigWigs packager settings (https://github.com/BigWigsMods/packager). Used by .github/workflows/release.yml.
+# The packager reads "## Interface: 16001" as WoW Forever and tags the CurseForge file for that game.
+# Files git ignores (PLAN.md, archive/, devtools/out ...) and dot-files are never packaged anyway.
+package-as: PeggleForever
+
+enable-nolib-creation: no
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
+ignore:
+  - devtools
+  - screenshots
+  - branding
+  - images/*.png

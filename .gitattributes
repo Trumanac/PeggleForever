@@ -1,0 +1,13 @@
+# Text files are stored with LF line endings; WoW reads either.
+* text=auto eol=lf
+
+# Game art, sound and archives are binary: never touch their bytes.
+*.tga binary
+*.blp binary
+*.png binary
+*.ogg binary
+*.mp3 binary
+*.zip binary
+
+# The original PopCap LICENSE is Windows-1252 text with CRLF line endings; keep it byte-for-byte.
+LICENSE -text
